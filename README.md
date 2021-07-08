@@ -60,6 +60,6 @@ If there is specific issues, bugs, or feature requests please report in our [mai
 - [Justin Lewis](https://github.com/justin-lewis) (Maintainer)
   
 ## License
-[Apache License 2.0](https://gitlab.extremevn.vn/development-mobile-1/library/flutter_amplify_sdk/raw/master/LICENSE)
+[Apache License 2.0](https://github.com/justin-lewis/safestate/blob/main/LICENSE)
 
 [mailing list]: https://groups.google.com/g/safestatehandler
