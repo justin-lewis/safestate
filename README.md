@@ -1,4 +1,5 @@
-# SafeState
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.justin-lewis/safestate/badge.svg?style=plastic)](https://maven-badges.herokuapp.com/io.github.justin-lewis/safestate)
+# Safe State
 An Android library for avoiding TransactionTooLargeException during state saving and restoration
 
 ## Getting Started
@@ -24,7 +25,7 @@ App build.gradle
 ```
 ##### **Usage**
 
-Basic Initialize in application class
+Basic Initialize at application class
 ```kotlin
         class SafeStateSampleApp : Application() {
             override fun onCreate() {
@@ -35,7 +36,7 @@ Basic Initialize in application class
         }
 ```
 
-In your base Activity class:
+At your base Activity class:
 ```kotlin
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         SafeState.restoreInstanceState(this, savedInstanceState)
@@ -52,6 +53,11 @@ In your base Activity class:
     }
 ```
 
+At your fragment state pager class
+```
+    class BannerPagerAdapter constructor(fragmentManager: FragmentManager) : SafeFragmentStatePagerAdapter(fragmentManager, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT)
+```
+
 ## Issues and feedback
 If there is specific issues, bugs, or feature requests please report in our [mailing list][mailing list]
 
@@ -60,6 +66,6 @@ If there is specific issues, bugs, or feature requests please report in our [mai
 - [Justin Lewis](https://github.com/justin-lewis) (Maintainer)
   
 ## License
-[Apache License 2.0](https://github.com/justin-lewis/safestate/blob/main/LICENSE)
+[Apache License 2.0](https://gitlab.extremevn.vn/development-mobile-1/library/flutter_amplify_sdk/raw/master/LICENSE)
 
 [mailing list]: https://groups.google.com/g/safestatehandler
